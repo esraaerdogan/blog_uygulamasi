@@ -1,0 +1,18 @@
+
+
+<h3>Üyelik Oluştur</h3>
+
+<form action="/register" method="POST">
+
+    <label for="username"><b>Kullanıcı Adı:</b></label>
+    <input type="text" placeholder="Kullanıcı Adı Giriniz" name="username"/>
+
+    <label for="password"><b>Parolanız:</b></label>
+    <input type="password" placeholder="Parolanızı Giriniz" name="password"/>
+
+
+    <input type="submit" value="Üyelik Oluştur" class="btn"/>
+
+    <p class="error"><%= message %></p>
+
+</form>

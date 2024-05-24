@@ -1,0 +1,20 @@
+
+
+<a href="/dashboard" style="display: inline;"><< Dashboard</a>
+
+<div class="admin-title">
+    <h2>Yetkili Bilgileri</h2>
+</div>
+
+<ul class="admin-posts">
+    <% data.forEach(user=>{  %>
+        <li>
+            <p><%= user.username %></p>
+            <p>Telefon: <%= user.phone %></p>
+            <p>E-Mail: <%= user.email %></p>
+            <div class="admin-post-controls">
+                <a href="/other-logs/<%= user.username %>" class="btn">İşlemler</a>
+            </div>
+        </li>
+    <% }) %>
+</ul>

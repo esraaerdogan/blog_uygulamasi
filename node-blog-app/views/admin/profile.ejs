@@ -1,0 +1,19 @@
+
+
+<h3>Merhaba <%= user.username %></h3>
+
+<form action="/profile" method="POST">
+
+    <label for="phone"><b>Telefon Numarası:</b></label>
+    <input type="text" value="<%= user.phone %>" name="phone"/>
+
+    <label for="email"><b>E-Mail:</b></label>
+    <input type="email" value="<%= user.email %>" name="email"/>
+
+
+    <input type="submit" value="Güncelle" class="btn"/>
+
+    <a class="registerBtn" href="/others">Yetkili Bilgileri</a>
+</form>
+
+<hr/>

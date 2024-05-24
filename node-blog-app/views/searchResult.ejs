@@ -1,0 +1,19 @@
+
+
+<div class="'author">
+    <h1 class="author_heading">Arama Sonuçları</h1>
+</div>
+
+
+<section class="articles">
+    <ul class="article-ul">
+        <% data.forEach(post=>{ %>
+            <li>
+                <a href="/post/<%= post._id %>">
+                    <span><%= post.title %></span>
+                    <span class="article-list_date"><%= post.createdAt.toLocaleString('tr-TR',{year:'numeric', month:'long', day:'numeric'}) %></span>
+                </a>
+            </li> 
+        <%})%>
+    </ul>
+</section>

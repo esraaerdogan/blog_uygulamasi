@@ -1,0 +1,28 @@
+<div class="admin-title">
+    <h2><%= username %> İşlemleri</h2>
+</div>
+
+<form action="/other-logs" method="POST">
+    <select name="method">
+        <option value="POST">POST</option>
+        <option value="DELETE">DELETE</option>
+        <option value="PUT">PUT</option>
+    </select>
+    <input type="hidden" name="username" value="<%= username %>"/>
+    <input type="submit" class="btn" value="Filtrele"/>
+
+
+
+</form>
+
+<ul class="admin-posts">
+    <% loglar.forEach(log=>{ %>
+        <li>
+            <p>POST ID: <%= log.id %></p>
+            <p><%= log.method %></p>
+            <div class="admin-post-controls">
+                <a href="/log/<%= log._id %>" class="btn">Detay</a>
+            </div>
+        </li>
+    <%}) %>
+</ul>

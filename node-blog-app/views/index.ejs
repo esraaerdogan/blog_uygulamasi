@@ -1,0 +1,43 @@
+
+
+<div class="author">
+    <h1>Pdf Dönüştürelim</h1>
+    <p class="author_body">HTML - JSON - XML - WORD</p>
+</div>
+
+<label for="postPdf"><b>Pdf Seç:</b></label>
+    <input type="file" name="postPdf" />
+    <br/><hr/>
+<!--     
+<img src="/img/kitap.jpg" class="kitap-image" width="475" height="250" /> -->
+
+
+<div class="profile">
+    <a href="#" class="btn btn-add">JSON</a>
+</div>
+<div class="profile">
+    <a href="#" class="btn btn-add">XML</a>
+</div>
+<div class="profile">
+    <a href="#" class="btn btn-add">WORD</a>
+</div>
+<div class="profile">
+    <a href="#" class="btn btn-add">HTML</a>
+</div>
+
+<section class="articles">
+    <ul class="article-ul">
+        <% data.forEach(post=>{%> 
+            <li>
+                <a href="/post/<%= post._id %>">
+                    <span><%= post.title %></span>
+                    <span class="article-list_date"><%= post.createdAt.toLocaleString('tr-TR',{year:'numeric', month:'long', day:'numeric'}) %></span>
+                </a>
+            </li> 
+        <%})%>
+    </ul>
+
+    <% if(nextPage!==null){ %>
+        <a href="/?page=<%= nextPage %>" class="pagination">&lt; Daha Önce Okunan Kitaplar</a>
+    <%}%>
+</section>
